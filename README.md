@@ -76,5 +76,6 @@ http://127.0.0.1:8000
 
 ## 🎥 Demo Video
 
-[![SIAS Demo Video](https://img.youtube.com/vi/https://youtu.be/YlfvU3T9Xak?si=GYwBacahA6WUcWdl/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/YlfvU3T9Xak?si=GYwBacahA6WUcWdl)
+[![SIAS Demo Video](https://img.youtube.com/vi/gzTI75nD8ms/0.jpg)](https://www.youtube.com/watch?v=gzTI75nD8ms)
+
 
