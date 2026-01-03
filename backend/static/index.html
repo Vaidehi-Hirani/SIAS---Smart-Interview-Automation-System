@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIAS - Smart Interview Automation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- SLEEP MODE -->
+        <div id="view-sleep" class="view active">
+            <h1>SIAS - Sleep Mode</h1>
+            <p>System is dormant. Saving energy.</p>
+            <div class="sensor-status">
+                <p>Monitoring Sensors...</p>
+                <div class="indicator" id="motion-indicator">Motion: Monitoring...</div>
+                <div class="indicator" id="voice-indicator">Voice: None</div>
+            </div>
+            
+            <div class="camera-config">
+                <label>Camera ID: </label>
+                <input type="number" id="camera-id-input" value="0" style="width: 50px;">
+                <button onclick="updateCameraConfig()" class="small-btn">Set Camera</button>
+            </div>
+
+            <button id="simulate-presence-btn">Simulate Presence (Wake Up)</button>
+        </div>
+
+        <!-- CANDIDATE SELECTION -->
+        <div id="view-selection" class="view">
+            <h1>Welcome to SIAS</h1>
+            <p>Please select who you are:</p>
+            <div class="options">
+                <button onclick="selectCandidate('Intern / Student')">1. Intern / Student</button>
+                <button onclick="selectCandidate('Fresher')">2. Fresher</button>
+                <button onclick="selectCandidate('Experienced Professional')">3. Experienced Professional</button>
+                <button onclick="selectCandidate('Visitor')" class="warning">4. Visitor / Internal Employee</button>
+            </div>
+            <p class="status-msg" id="selection-msg"></p>
+        </div>
+
+        <!-- INTERVIEW MODE -->
+        <div id="view-interview" class="view">
+            <h1>Interview in Progress</h1>
+            <div class="recording-indicator">
+                <div class="red-dot"></div> Recording...
+            </div>
+            <p>Please introduce yourself and describe your skills/projects.</p>
+            <canvas id="visualizer"></canvas>
+            <button onclick="endInterview()" class="danger">Finish Interview</button>
+        </div>
+
+        <!-- DASHBOARD (HR VIEW) -->
+        <div id="view-dashboard" class="view">
+            <div class="nav">
+                <h2>HR Dashboard</h2>
+                <button onclick="refreshDashboard()">Refresh</button>
+                <button onclick="resetSystem()">Reset System</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Summary</th>
+                            <th>Skills</th>
+                            <th>Availability</th>
+                            <th>Experience</th>
+                            <th>Audio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dashboard-body">
+                        <!-- Rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- FOOTER NAV (For Demo Purpose) -->
+        <div class="footer-nav">
+            <button onclick="showDashboard()">Go to HR Dashboard</button>
+        </div>
+    </div>
+
+    <!-- SUMMARY MODAL -->
+    <div id="summary-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Candidate Summary</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

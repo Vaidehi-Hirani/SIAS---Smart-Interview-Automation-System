@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Audio Files (Large/Sensitive)
+backend/audio_chunks/
+backend/uploads/
+*.wav
+*.mp3
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
