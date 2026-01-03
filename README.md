@@ -74,9 +74,7 @@ http://127.0.0.1:8000
 -   **Model Download:** The first run may take a moment to download the Whisper model (approx. 150MB).
 -   **Browser Permissions:** Requires Camera & Microphone access permissions.
 
-## 📸 Screenshots
+## 🎥 Demo Video
 
-*(Placeholders for actual screenshots)*
--   *Candidate Landing Page*
--   *Live Interview Interface*
--   *HR Dashboard & Detailed Summary Modal*
+[![SIAS Demo Video](https://img.youtube.com/vi/https://youtu.be/YlfvU3T9Xak?si=GYwBacahA6WUcWdl/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/YlfvU3T9Xak?si=GYwBacahA6WUcWdl)
+
